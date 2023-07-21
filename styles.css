@@ -126,6 +126,10 @@ i {
     margin-bottom: 0;
 }
 
+.hide-bottom {
+    display: none;
+}
+
 span {
     font-weight: 700;
 }

@@ -10,6 +10,11 @@ const checkThree = document.getElementById('check-three');
 const checkFour = document.getElementById('check-four');
 const checkFive = document.getElementById('check-five');
 
+const firstChevron = document.getElementById('first');
+const secondChevron = document.getElementById('second');
+const thirdChevron = document.getElementById('third');
+const fourthChevron = document.getElementById('fourth');
+
 titleContainer.addEventListener('click', (evt) => {
     if (
         evt.target.classList[0] === 'tablet-title-two' &&
@@ -41,6 +46,7 @@ let arrOfChecks = [
     { check: checkFour, pressed: false, element: 'four' },
     { check: checkFive, pressed: false, element: 'five' },
 ];
+
 boxIcons.addEventListener('click', (evt) => {
     arrOfChecks.map((el) =>
         el.check.id === evt.target.id && el.pressed === false
@@ -59,3 +65,40 @@ boxIcons.addEventListener('click', (evt) => {
         }
     });
 });
+
+const arrOfChevrons = [
+    {
+        chevron: firstChevron,
+        clicked: false,
+    },
+    {
+        chevron: secondChevron,
+        clicked: false,
+    },
+    {
+        chevron: thirdChevron,
+        clicked: false,
+    },
+    {
+        chevron: fourthChevron,
+        clicked: false,
+    },
+];
+
+arrOfChevrons.map((chevron) =>
+    chevron.chevron.addEventListener('click', (evt) => {
+        if (
+            evt.target.parentElement.parentElement.parentElement.lastElementChild.classList.contains(
+                'hide-bottom'
+            )
+        ) {
+            evt.target.parentElement.parentElement.parentElement.lastElementChild.classList.remove(
+                'hide-bottom'
+            );
+        } else {
+            evt.target.parentElement.parentElement.parentElement.lastElementChild.classList.add(
+                'hide-bottom'
+            );
+        }
+    })
+);
