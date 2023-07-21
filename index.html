@@ -9,29 +9,49 @@
             href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400&display=swap"
             rel="stylesheet"
         />
+        <script defer src="index.js"></script>
     </head>
     <body>
         <section class="box">
-            <div class="title-container">
-                <h1 class="tablet-title-one">What's in the box</h1>
-                <h1 class="tablet-title-two">Tech Specs</h1>
+            <div id="title-container" class="title-container">
+                <h1 id="tablet-title-one" class="tablet-title-one black">
+                    What's in the box
+                </h1>
+                <h1 id="tablet-title-two" class="tablet-title-two gray">
+                    Tech Specs
+                </h1>
             </div>
-            <div class="background-image">
+            <div id="background-image" class="background-image">
+                <div id="one" class="hidden-check">
+                    <i class="fa-solid fa-2xl fa-check"></i>
+                </div>
+                <div id="two" class="hidden-check">
+                    <i class="fa-solid fa-2xl fa-check"></i>
+                </div>
+                <div id="three" class="hidden-check">
+                    <i class="fa-solid fa-2xl fa-check"></i>
+                </div>
+                <div id="four" class="hidden-check">
+                    <i class="fa-solid fa-2xl fa-check"></i>
+                </div>
+                <div id="five" class="hidden-check">
+                    <i class="fa-solid fa-2xl fa-check"></i>
+                </div>
                 <div class="box-items">
-                    <div class="box-icons">
-                        <div class="icon-container">
+                    <div id="box-icons" class="box-icons">
+                        <div id="check-one" class="icon-container">
                             <i class="fa-solid fa-helmet-safety"></i>
                         </div>
-                        <div class="icon-container">
+                        <div id="check-two" class="icon-container">
                             <i class="fa-solid fa-book"></i>
                         </div>
-                        <div class="icon-container">
+                        <div id="check-three" class="icon-container">
                             <i class="fa-solid fa-code"></i>
                         </div>
-                        <div class="icon-container">
+                        <div id="check-four" class="icon-container">
                             <i class="fa-regular fa-circle"></i>
                         </div>
-                        <div class="icon-container">
+                        <div id="check-five" class="icon-container">
                             <i class="fa-solid fa-battery-half"></i>
                         </div>
                     </div>
